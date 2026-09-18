@@ -39,9 +39,11 @@ const PICO8_PALETTE = ["#000000", "#1d2b53", "#7e2553", "#008751", "#ab5236", "#
 const DB32_PALETTE = ["#9badb7", "#524b24", "#663931", "#76428a", "#d77bba", "#323c39", "#37946e", "#45283c", "#eec39a", "#ac3232", "#847e87", "#8a6f30", "#99e550", "#8f974a", "#4b692f", "#8f563b", "#696a6a", "#cbdbfc", "#d9a066", "#222034", "#6abe30", "#639bff", "#595652", "#5fcde4", "#306082", "#ffffff", "#df7126", "#5b6ee1", "#fbf236", "#000000", "#3f3f74", "#d95763"];
 const RESURRECT64_PALETTE = ["#2e222f", "#3e3546", "#625565", "#966c6c", "#ab947a", "#694f62", "#7f708a", "#9babb2", "#c7dcd0", "#ffffff", "#6e2727", "#b33831", "#ea4f36", "#f57d4a", "#ae2334", "#e83b3b", "#fb6b1d", "#f79617", "#f9c22b", "#7a3045", "#9e4539", "#cd683d", "#e6904e", "#fbb954", "#4c3e24", "#676633", "#a2a947", "#d5e04b", "#fbff86", "#165a4c", "#239063", "#1ebc73", "#91db69", "#cddf6c", "#313638", "#374e4a", "#547e64", "#92a984", "#b2ba90", "#0b5e65", "#0b8a8f", "#0eaf9b", "#30e1b9", "#8ff8e2", "#323353", "#484a77", "#4d65b4", "#4d9be6", "#8fd3ff", "#45293f", "#6b3e75", "#905ea9", "#a884f3", "#eaaded", "#753c54", "#a24b6f", "#cf657f", "#ed8099", "#831c5d", "#c32454", "#f04f78", "#f68181", "#fca790", "#fdcbb0"];
 const ONMYOJI64_10YEARS_PALETTE = ["#ffffff", "#000000", "#aaaaaa", "#555555", "#f9ebde", "#dfdfdf", "#7c7c7c", "#363636", "#fed3c7", "#ffc4ce", "#faac8e", "#ff8b83", "#f44336", "#e91e63", "#e2669e", "#fec2a6", "#86394d", "#6a2a2e", "#4c2a1e", "#9c27b0", "#673ab7", "#3f51b5", "#b4a2d8", "#a692c5", "#a4789c", "#004670", "#057197", "#2196f3", "#00bcd4", "#3be5db", "#97fddc", "#bed8fa", "#b8bae1", "#167300", "#37a93c", "#89e642", "#d7ff07", "#95d4c3", "#aec099", "#25b88c", "#fff6d1", "#f8cb8c", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#b83f27", "#795548", "#ffeea1", "#ece2cd", "#dec16d", "#ca825c", "#c7ca98", "#c6c754", "#92934a", "#525231", "#ffd9a0", "#fff4eb", "#ffeadf", "#fde7c8", "#e4bd7d", "#d5a37b", "#aea298", "#726255"];
+const ONMYOJI64_2026WZEZ_PALETTE = ["#ffffff", "#000000", "#aaaaaa", "#555555", "#f9ebde", "#dfdfdf", "#7c7c7c", "#363636", "#fed3c7", "#ffc4ce", "#faac8e", "#ff8b83", "#f44336", "#e91e63", "#e2669e", "#fec2a6", "#86394d", "#6a2a2e", "#4c2a1e", "#9c27b0", "#673ab7", "#3f51b5", "#b4a2d8", "#ab7bde", "#a4789c", "#004670", "#057197", "#2196f3", "#00bcd4", "#3be5db", "#97fddc", "#bed8fa", "#5f477b", "#167300", "#37a93c", "#89e642", "#d7ff07", "#95d4c3", "#aec099", "#25b88c", "#fff6d1", "#f8cb8c", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#b83f27", "#795548", "#ffeea1", "#ece2cd", "#dec16d", "#ca825c", "#c7ca98", "#c6c754", "#92934a", "#525231", "#ffd9a0", "#660078", "#ffeadf", "#fde7c8", "#e4bd7d", "#d5a37b", "#aea298", "#726255"];
 
 const PALETTE_PRESETS = [
-  { id: "onmyoji64", label: "阴阳师十周年画板（64 色）", colors: ONMYOJI64_10YEARS_PALETTE },
+  { id: "onmyoji64", label: "阴阳师十周年（64 色）", colors: ONMYOJI64_10YEARS_PALETTE },
+  { id: "2026wzez64", label: "2026为崽而战（64 色）", colors: ONMYOJI64_2026WZEZ_PALETTE },
   { id: "cube64", label: "均匀 64 色（默认）", colors: defaultPalette() },
   { id: "pico8", label: "PICO 8（16 色）", colors: PICO8_PALETTE },
   { id: "db32", label: "DawnBringer 32（32 色）", colors: DB32_PALETTE },
@@ -2361,7 +2363,7 @@ export default function PixelBoardConverter() {
                 </div>
               </>
             ) : (
-              <div className="placeholder">上传图片后，像素网格将在此处显示</div>
+              <div className="placeholder">上传图片后，像素网格将在此显示</div>
             )}
           </div>
 
@@ -2406,11 +2408,11 @@ export default function PixelBoardConverter() {
 
       <div className="pbc-footer">
         <div className="credits">
-          <span>作者：玖云</span>
+          <span>作者：追月寮_玖云</span>
           <a href="https://b23.tv/nlrfgrD" target="_blank" rel="noopener noreferrer">B站 @玖云-</a>
           <a href="https://xhslink.cn/o/3f8MMhvl8I9" target="_blank" rel="noopener noreferrer">小红书 @玖云</a>
           <a href="https://github.com/JiuyunSama" target="_blank" rel="noopener noreferrer">GitHub @JiuyunSama</a>
-          <span>项目库：待发布</span>
+          <a href="https://github.com/JiuyunSama/pixel-board-converter" target="_blank" rel="noopener noreferrer">项目仓库</a>
         </div>
         <p>为了伟大的互联网共享精神，网页完全免费开源。</p>
         <p>如果在使用过程中有任何疑问和建议，请随时联系，我会尽快回复。如果对大家有帮助，也欢迎大家评论反馈。</p>
